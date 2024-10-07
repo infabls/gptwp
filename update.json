@@ -1,5 +1,5 @@
 {
-  "new_version": "1.3",
+  "new_version": "1.5",
   "download_url": "https://github.com/infabls/gptwp/archive/refs/heads/main.zip",
-  "changelog": "Minor bug fixes and performance improvements2."
+  "changelog": "New tests"
 }
