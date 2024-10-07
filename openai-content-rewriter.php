@@ -2,8 +2,8 @@
 /**
  * Plugin Name: OpenAI Content Rewriter
  * Description: A plugin that rewrites content from URLs using OpenAI's GPT-3 API, with integration for Yoast SEO.
- * Version: 1.0
- * Author: Your Name
+ * Version: 1.2
+ * Author: German Bragin
  */
 
 // Exit if accessed directly
