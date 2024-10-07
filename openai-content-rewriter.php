@@ -2,7 +2,7 @@
 /**
  * Plugin Name: OpenAI Content Rewriter
  * Description: A plugin that rewrites content from URLs using OpenAI's GPT-3 API, with integration for Yoast SEO.
- * Version: 1.3
+ * Version: 1.4
  * Author: German Bragin
  */
 
@@ -223,7 +223,7 @@ function openai_content_rewriter_check_for_update($transient) {
     }
 
     // URL of the update-info.json file hosted on your server
-    $remote_url = 'https://github.com/infabls/gptwp/blob/main/update.json';
+    $remote_url = 'https://raw.githubusercontent.com/infabls/gptwp/refs/heads/main/update.json';
 
     $remote = wp_remote_get($remote_url);
 
@@ -250,7 +250,7 @@ add_filter('plugins_api', 'openai_content_rewriter_plugins_api', 20, 3);
 function openai_content_rewriter_plugins_api($res, $action, $args) {
     // Check if the action is for the plugin
     if ($action === 'plugin_information' && isset($args->slug) && $args->slug === 'openai-content-rewriter') {
-        $remote_url = 'https://github.com/infabls/gptwp/blob/main/update.json';
+        $remote_url = 'https://raw.githubusercontent.com/infabls/gptwp/refs/heads/main/update.json';
         $remote = wp_remote_get($remote_url);
 
         if (!is_wp_error($remote) && isset($remote['response']['code']) && $remote['response']['code'] == 200) {
